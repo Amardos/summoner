@@ -24,7 +24,10 @@
 }
 
   .activate-resource.fire {
-    background: url()
+    background: url('./images/fire.png') no-repeat;
+    background-color: #E89797;
+    width: 60px;
+    height: 60px;
   }
 
 .buy-resource {

@@ -85,8 +85,7 @@ function addSection(parent, resourceName) {
   parent.appendChild(container);
 
   let activateButton = document.createElement('button');
-  activateButton.setAttribute('class', 'activate-resource');
-  activateButton.innerHTML = resource.display;
+  activateButton.setAttribute('class', `activate-resource ${resource.set}`);
   activateButton.addEventListener('click', function(){ activateResource(resourceName); });
   container.appendChild(activateButton);
 
