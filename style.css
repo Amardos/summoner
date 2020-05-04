@@ -21,19 +21,43 @@
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
   border-radius: 50%;
+  z-index: 2;
+  background-color: #FFFFFF;
 }
 
+.activate-resource[disabled] {
+  background-color: rgba(125, 125, 125, 1);
+}
+
+  .activate-resource.essence {
+    background-color: #693F7B;
+    border: 3px solid #5E386E;
+    color: white;
+  }
+
   .activate-resource.fire {
-    background: url('./images/fire.png') no-repeat;
-    background-color: #E89797;
-    width: 60px;
-    height: 60px;
+    border: 3px solid #C44A4A;
+    color: white;
+  }
+
+  .activate-resource.water {
+    border: 3px solid #334F8A;
+    color: white;
+  }
+
+  .activate-resource.earth {
+    border: 3px solid #2D7B76;
+    color: white;
+  }
+
+  .activate-resource.air {
+    border: 3px solid #E19C00;
+    color: white;
   }
 
 .buy-resource {
   grid-column: 2 / span 2;
   grid-row: 2;
-  z-index: -1;
   text-align: center;
 }
 
@@ -42,7 +66,6 @@
   grid-row: 1;
   height: 100%;
   width: 100%;
-  z-index: -1;
 }
 
 .grid-container > span {
@@ -66,7 +89,7 @@ progress[value] {
       -webkit-linear-gradient(top, 
                               rgba(255, 255, 255, .25), 
                               rgba(0, 0, 0, .25)),
-      -webkit-linear-gradient(left, #7B3F6F, #693F7B);
+      -webkit-linear-gradient(left, #5E386E, #693F7B);
 
       border-radius: 2px; 
       background-size: 75px 100%, 100% 100%, 100% 100%;
@@ -77,7 +100,7 @@ progress[value] {
       -webkit-linear-gradient(top, 
                               rgba(255, 255, 255, .25), 
                               rgba(0, 0, 0, .25)),
-      -webkit-linear-gradient(left, #DA9753, #DA5353);
+      -webkit-linear-gradient(left, #C44A4A, #DA5353);
   }
 
   progress[value].water::-webkit-progress-value {
@@ -85,7 +108,7 @@ progress[value] {
       -webkit-linear-gradient(top, 
                               rgba(255, 255, 255, .25), 
                               rgba(0, 0, 0, .25)),
-      -webkit-linear-gradient(left, #4A399A, #39589A);
+      -webkit-linear-gradient(left, #334F8A, #39589A);
   }
 
   progress[value].earth::-webkit-progress-value {
@@ -93,7 +116,7 @@ progress[value] {
       -webkit-linear-gradient(top, 
                               rgba(255, 255, 255, .25), 
                               rgba(0, 0, 0, .25)),
-      -webkit-linear-gradient(left, #336389, #338934);
+      -webkit-linear-gradient(left, #2D7B76, #338984);
   }
 
   progress[value].air::-webkit-progress-value {
@@ -101,5 +124,5 @@ progress[value] {
       -webkit-linear-gradient(top, 
                               rgba(255, 255, 255, .25), 
                               rgba(0, 0, 0, .25)),
-      -webkit-linear-gradient(left, #CBFB00, #FBAE00);
+      -webkit-linear-gradient(left, #E19C00, #FBAE00);
   }
