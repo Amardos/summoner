@@ -1,0 +1,102 @@
+/*
+  Earth: #338984
+  Fire: #DA5353
+  Air: #FBAE00
+  Water: #39589A
+
+  Essence: #693F7B
+*/
+
+.grid-container {
+  display: grid;
+}
+
+.resource-block {
+  grid-template-columns: 30px 30px auto 60px;
+  grid-template-rows: 30px 30px;
+  margin: 10px;
+}
+
+.activate-resource {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  border-radius: 50%;
+}
+
+  .activate-resource.fire {
+    background: url()
+  }
+
+.buy-resource {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  z-index: -1;
+  text-align: center;
+}
+
+.grid-container > progress {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.grid-container > span {
+  grid-column: 4;
+  grid-row: 2;
+  text-align: center;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  
+  /* Get rid of default border in Firefox. */
+  border: none;
+}
+
+  progress[value]::-webkit-progress-value {
+    background-image:
+      -webkit-linear-gradient(top, 
+                              rgba(255, 255, 255, .25), 
+                              rgba(0, 0, 0, .25)),
+      -webkit-linear-gradient(left, #7B3F6F, #693F7B);
+
+      border-radius: 2px; 
+      background-size: 75px 100%, 100% 100%, 100% 100%;
+  }
+
+  progress[value].fire::-webkit-progress-value {
+    background-image:
+      -webkit-linear-gradient(top, 
+                              rgba(255, 255, 255, .25), 
+                              rgba(0, 0, 0, .25)),
+      -webkit-linear-gradient(left, #DA9753, #DA5353);
+  }
+
+  progress[value].water::-webkit-progress-value {
+    background-image:
+      -webkit-linear-gradient(top, 
+                              rgba(255, 255, 255, .25), 
+                              rgba(0, 0, 0, .25)),
+      -webkit-linear-gradient(left, #4A399A, #39589A);
+  }
+
+  progress[value].earth::-webkit-progress-value {
+    background-image:
+      -webkit-linear-gradient(top, 
+                              rgba(255, 255, 255, .25), 
+                              rgba(0, 0, 0, .25)),
+      -webkit-linear-gradient(left, #336389, #338934);
+  }
+
+  progress[value].air::-webkit-progress-value {
+    background-image:
+      -webkit-linear-gradient(top, 
+                              rgba(255, 255, 255, .25), 
+                              rgba(0, 0, 0, .25)),
+      -webkit-linear-gradient(left, #CBFB00, #FBAE00);
+  }
